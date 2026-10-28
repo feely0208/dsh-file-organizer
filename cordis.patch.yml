@@ -1,0 +1,4 @@
+# @deepwhale-cn/dsh-file-organizer 的组合层
+- insert:
+    - id: file-organizer
+      name: '@deepwhale-cn/dsh-file-organizer'

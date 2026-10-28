@@ -1,0 +1,19 @@
+{
+  "name": "@deepwhale-cn/dsh-file-organizer",
+  "version": "0.1.0",
+  "description": "深鲸文件整理：按类型/年月归档、同名自动加序号、找重复、清空目录——默认只看不动",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["dsh","dsh-plugin","deepseek-harness","plugin","files","organize","dedupe","整理","归档"],
+  "files": ["lib","bin","skill","cordis.patch.yml","README.md","LICENSE"],
+  "main": "./lib/index.js",
+  "exports": { ".": "./lib/index.js", "./client": "./lib/client.js", "./package.json": "./package.json" },
+  "bin": { "dsh-file-organizer": "./bin/cli.mjs" },
+  "engines": { "dsh": ">=0.1.0-rc.6 <0.3.0", "node": ">=18" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "inject": ["@deepseek-ai/dsh-client-runtime"], "platform": "web", "immediately": true } },
+  "dependencies": { "@deepwhale-cn/dsh-guard-core": "^0.10.1" },
+  "peerDependencies": { "@deepseek-ai/dsh-skill": "*" },
+  "repository": { "type": "git", "url": "git+https://github.com/feely0208/dsh-file-organizer.git" },
+  "homepage": "https://www.deepwhale.org.cn/skills.html",
+  "bugs": { "url": "https://github.com/feely0208/dsh-file-organizer/issues" }
+}
